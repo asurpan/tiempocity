@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - TIEMPOCITY</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: #09141B;
+            color: #ECEFF1;
+            line-height: 1.7;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #4FC3F7;
+            margin-bottom: 8px;
+        }
+
+        .update-date {
+            font-size: 14px;
+            color: #78909C;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #81D4FA;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 6px;
+        }
+
+        p, li {
+            font-size: 15px;
+            color: #B0BEC5;
+            margin-bottom: 14px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: #4FC3F7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">← Volver a TIEMPOCITY</a>
+
+    <h1>Política de Privacidad de TIEMPOCITY</h1>
+    <div class="update-date">Última actualización: Noviembre de 2026</div>
+
+    <p>Esta Política de Privacidad describe cómo <strong>TIEMPOCITY</strong> (desarrollada por <strong>asurpan</strong>) recopila, utiliza y protege la información del usuario en nuestra aplicación móvil para Android.</p>
+
+    <h2>1. Información y Datos que Recopilamos</h2>
+    <p>TIEMPOCITY está diseñada primando la privacidad del usuario y la eficiencia energética de su dispositivo:</p>
+    <ul>
+        <li><strong>Ubicación de Consulta:</strong> La aplicación utiliza el municipio, código postal o barrio seleccionado expresamente por el usuario para solicitar las predicciones meteorológicas a la API de Open-Meteo y AEMET. La aplicación no rastrea ni almacena la posición GPS continua del usuario en segundo plano (0% uso de GPS continuo).</li>
+        <li><strong>Preferencias Locales:</strong> Guardamos de forma estrictamente local en el almacenamiento del dispositivo (SharedPreferences) las ciudades favoritas guardadas por el usuario, el historial de caché del tiempo para uso sin conexión y la configuración de avisos (lluvia, polen, alertas AEMET).</li>
+    </ul>
+
+    <h2>2. Permisos del Dispositivo</h2>
+    <p>La aplicación puede solicitar los siguientes permisos de Android exclusivamente para sus funciones principales:</p>
+    <ul>
+        <li><strong>Internet (<code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code>):</strong> Necesario para obtener las predicciones en tiempo real de Open-Meteo/AEMET, las imágenes del radar de lluvia y los anuncios de Google AdMob.</li>
+        <li><strong>Notificaciones (<code>POST_NOTIFICATIONS</code>):</strong> Solicitado en Android 13+ únicamente para emitir alertas sonoras cuando se detecte probabilidad inminente de lluvia o alertas meteorológicas severas en la ciudad seleccionada.</li>
+        <li><strong>Vibración (<code>VIBRATE</code>):</strong> Para generar patrones de vibración distintivos (doble vibración corta para lluvia / triple vibración larga para alertas severas AEMET).</li>
+    </ul>
+
+    <h2>3. Servicios de Terceros y Anuncios (Google AdMob)</h2>
+    <p>TIEMPOCITY utiliza servicios de terceros integrados para el funcionamiento y la monetización de la aplicación:</p>
+    <ul>
+        <li><strong>Google AdMob:</strong> Muestra banners publicitarios discretos dentro de la app. Google AdMob puede recopilar y utilizar identificadores publicitarios de Android (Advertising ID) y datos anonimizados para la personalización y medición de anuncios de acuerdo con la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a>.</li>
+        <li><strong>Open-Meteo / AEMET API:</strong> Para la obtención de datos meteorológicos cifrados a través de HTTPS. No se envían datos de identificación personal a estos servidores.</li>
+    </ul>
+
+    <h2>4. Menores de Edad y Privacidad Infantil (COPPA / RGPD)</h2>
+    <p>TIEMPOCITY no recopila a sabiendas datos de identificación personal de niños menores de 13 años. Si cree que un menor ha proporcionado información personal, comuníquese con nosotros para eliminarla de inmediato.</p>
+
+    <h2>5. Seguridad de los Datos</h2>
+    <p>Utilizamos protocolos estándar de la industria (HTTPS/TLS) para todas las conexiones de red. Las preferencias y la caché de datos permanecen en la memoria privada del dispositivo del usuario y se eliminan automáticamente si se desinstala la aplicación o se borran sus datos desde Ajustes de Android.</p>
+
+    <h2>6. Cambios en esta Política de Privacidad</h2>
+    <p>Nos reservamos el derecho de actualizar esta Política de Privacidad periódicamente. Cualquier cambio se publicará en esta página web antes de que entre en vigor.</p>
+
+    <h2>7. Contacto</h2>
+    <p>Si tiene preguntas o dudas sobre esta Política de Privacidad o sobre el tratamiento de datos en TIEMPOCITY, puede ponerse en contacto con el desarrollador a través del perfil de GitHub de <a href="https://github.com/asurpan" target="_blank" rel="noopener">asurpan</a>.</p>
+
+</body>
+</html>

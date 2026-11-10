@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIEMPOCITY - El Tiempo Más Exacto de Sevilla y España | AEMET 2.5km</title>
+
+    <!-- SEO / ASO Meta Tags -->
+    <meta name="description" content="Descarga TIEMPOCITY para Android. La aplicación del tiempo más exacta para Sevilla y toda España basada en los modelos AEMET Harmonie (2.5km). Alertas sonoras de lluvia, radar en directo, widget azul para inicio y 0% consumo extra de batería.">
+    <meta name="keywords" content="tiempo sevilla, el tiempo en sevilla, aemet sevilla, app del tiempo españa, radar de lluvia sevilla, widget tiempo azul, avisos lluvia sevilla, previsión por horas sevilla">
+    <meta name="author" content="TIEMPOCITY - asurpan">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://asurpan.github.io/tiempocity/">
+    <meta property="og:title" content="TIEMPOCITY - El Tiempo Más Exacto de Sevilla y España">
+    <meta property="og:description" content="Precisión oficial AEMET Harmonie (2.5km), alertas sonoras inteligentes sin mirar el móvil, radar de lluvia en vivo y widget azul para pantalla de inicio.">
+    <meta property="og:image" content="https://asurpan.github.io/tiempocity/preview.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TIEMPOCITY - El Tiempo Más Exacto de Sevilla">
+    <meta name="twitter:description" content="Previsión por horas al minuto, avisos sonoros de lluvia y radar en directo con 0% gasto extra de batería.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #09141B 0%, #0F2027 50%, #203A43 100%);
+            color: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1100px;
+            padding: 24px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #4FC3F7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a {
+            color: #81D4FA;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #FFFFFF;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 1100px;
+            padding: 60px 20px 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .badge {
+            background: rgba(79, 195, 247, 0.15);
+            border: 1px solid rgba(79, 195, 247, 0.4);
+            color: #81D4FA;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #B0BEC5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 20px;
+            color: #B0BEC5;
+            max-width: 750px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .play-store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: #0288D1;
+            color: #FFFFFF;
+            padding: 16px 36px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(2, 136, 209, 0.4);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .play-store-btn:hover {
+            transform: translateY(-3px);
+            background: #039BE5;
+        }
+
+        .features-grid {
+            width: 100%;
+            max-width: 1100px;
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: rgba(30, 60, 114, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(79, 195, 247, 0.4);
+        }
+
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: #B0BEC5;
+            line-height: 1.6;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 1100px;
+            padding: 40px 20px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #78909C;
+        }
+
+        footer a {
+            color: #81D4FA;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 34px; }
+            p.subtitle { font-size: 16px; }
+            footer { flex-direction: column; gap: 16px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            🌤️ TIEMPOCITY
+        </div>
+        <div class="nav-links">
+            <a href="privacy.html">Política de Privacidad</a>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="badge">🇪🇸 Conexión Oficial AEMET Harmonie 2.5km</div>
+        <h1>El Tiempo Más Exacto de Sevilla y España</h1>
+        <p class="subtitle">
+            Tarjetas azules elegantes con previsión por horas al minuto, alertas sonoras inteligentes que avisan antes de llover y radar en directo con 0% gasto extra de batería.
+        </p>
+
+        <div class="cta-group">
+            <a href="https://play.google.com/store/apps/details?id=com.example.tiempocity" class="play-store-btn" target="_blank" rel="noopener">
+                <span>🤖</span> Descargar en Google Play
+            </a>
+            <span style="font-size: 13px; color: #78909C;">Compatible con Android 10+ • Xiaomi MIUI / HyperOS • Totalmente Gratuito</span>
+        </div>
+    </main>
+
+    <section class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">📡</div>
+            <h3>Modelos AEMET Harmonie (2.5 km)</h3>
+            <p>Conexión directa a los modelos de máxima resolución espacial de España. Sin imprecisiones de servidores mundiales genéricos.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🔊</div>
+            <h3>Avisos Sonoros Sin Mirar el Móvil</h3>
+            <p>Sonido suave y vibración 'di-di' para lluvia inminente y tono de alarma 'DA-DA-DA' para avisos meteorológicos de peligro AEMET.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">💧</div>
+            <h3>Gotas por Intensidad Estilo Google</h3>
+            <p>Reconoce de un vistazo si la lluvia es ligera (1 gota 💧), moderada (2 gotas 🌧️) o fuerte/tormenta (3 gotas 🌩️ con nube de tormenta).</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Widget Azul de Ancho Completo</h3>
+            <p>Coloca la tarjeta azul en tu pantalla de inicio con 6 horas en horizontal, días de la semana y botón de refresco manual con sonido beep.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3>Radar de Lluvia & Búsqueda por Barrios</h3>
+            <p>Mapa de lluvia en vivo e integración con 100% de los municipios, códigos postales y barrios (Triana, Nervión, Macarena, Aljarafe...).</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🔋</div>
+            <h3>0% Consumo Extra de Batería</h3>
+            <p>Chip GPS 100% apagado en segundo plano y WorkManager de Android para máxima eficiencia energética.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div>© 2026 TIEMPOCITY (asurpan). Todos los derechos reservados.</div>
+        <div>
+            <a href="privacy.html">Política de Privacidad y Términos de Google Play</a>
+        </div>
+    </footer>
+
+</body>
+</html>
