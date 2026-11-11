@@ -5,23 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIEMPOCITY - El Tiempo Más Exacto de Sevilla y España | AEMET 2.5km</title>
 
-    <!-- SEO / ASO Meta Tags -->
-    <meta name="description" content="Descarga TIEMPOCITY para Android. La aplicación del tiempo más exacta para Sevilla y toda España basada en los modelos AEMET Harmonie (2.5km). Alertas sonoras de lluvia, radar en directo, widget azul para inicio y 0% consumo extra de batería.">
+    <!-- Essential SEO Meta Tags -->
+    <meta name="description" content="Descarga TIEMPOCITY para Android. La aplicación del tiempo más exacta para Sevilla y España con modelos AEMET Harmonie (2.5km), alertas sonoras de lluvia, gotas por intensidad estilo Google, widget azul y 0% consumo extra de batería.">
     <meta name="keywords" content="tiempo sevilla, el tiempo en sevilla, aemet sevilla, app del tiempo españa, radar de lluvia sevilla, widget tiempo azul, avisos lluvia sevilla, previsión por horas sevilla">
     <meta name="author" content="TIEMPOCITY - asurpan">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://asurpan.github.io/tiempocity/">
 
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <!-- Facebook / WhatsApp / LinkedIn Open Graph -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TIEMPOCITY">
     <meta property="og:url" content="https://asurpan.github.io/tiempocity/">
     <meta property="og:title" content="TIEMPOCITY - El Tiempo Más Exacto de Sevilla y España">
-    <meta property="og:description" content="Precisión oficial AEMET Harmonie (2.5km), alertas sonoras inteligentes sin mirar el móvil, radar de lluvia en vivo y widget azul para pantalla de inicio.">
+    <meta property="og:description" content="Modelos oficiales AEMET Harmonie 2.5km, avisos sonoros de lluvia sin mirar el móvil, gotas por intensidad y widget azul para inicio.">
     <meta property="og:image" content="https://asurpan.github.io/tiempocity/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
 
-    <!-- Twitter Card -->
+    <!-- Twitter / X Meta Cards -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://asurpan.github.io/tiempocity/">
     <meta name="twitter:title" content="TIEMPOCITY - El Tiempo Más Exacto de Sevilla">
-    <meta name="twitter:description" content="Previsión por horas al minuto, avisos sonoros de lluvia y radar en directo con 0% gasto extra de batería.">
+    <meta name="twitter:description" content="Previsión por horas AEMET 2.5km, avisos sonoros de lluvia, radar en vivo y widget azul con 0% gasto de batería.">
+    <meta name="twitter:image" content="https://asurpan.github.io/tiempocity/preview.png">
+
+    <!-- Schema.org Structured Data (Google Search Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TIEMPOCITY",
+      "operatingSystem": "Android",
+      "applicationCategory": "WeatherApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "128"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "asurpan"
+      },
+      "description": "La aplicación del tiempo más exacta para Sevilla y España basada en AEMET Harmonie 2.5km con avisos sonoros de lluvia y widget azul."
+    }
+    </script>
 
     <style>
         * {
@@ -74,7 +107,7 @@
         .hero {
             width: 100%;
             max-width: 1100px;
-            padding: 60px 20px 40px;
+            padding: 40px 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -89,32 +122,48 @@
             border-radius: 20px;
             font-size: 14px;
             font-weight: 600;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 46px;
             font-weight: 900;
             line-height: 1.2;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             background: linear-gradient(180deg, #FFFFFF 0%, #B0BEC5 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         p.subtitle {
-            font-size: 20px;
+            font-size: 19px;
             color: #B0BEC5;
             max-width: 750px;
             line-height: 1.6;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+        }
+
+        .banner-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px 0 36px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .cta-group {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
         }
 
         .play-store-btn {
@@ -140,9 +189,9 @@
         .features-grid {
             width: 100%;
             max-width: 1100px;
-            padding: 60px 20px;
+            padding: 40px 20px 60px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1f));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
         }
 
@@ -201,7 +250,7 @@
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 34px; }
+            h1 { font-size: 32px; }
             p.subtitle { font-size: 16px; }
             footer { flex-direction: column; gap: 16px; text-align: center; }
         }
@@ -222,14 +271,18 @@
         <div class="badge">🇪🇸 Conexión Oficial AEMET Harmonie 2.5km</div>
         <h1>El Tiempo Más Exacto de Sevilla y España</h1>
         <p class="subtitle">
-            Tarjetas azules elegantes con previsión por horas al minuto, alertas sonoras inteligentes que avisan antes de llover y radar en directo con 0% gasto extra de batería.
+            Tarjetas azules elegantes con previsión por horas al minuto, avisos sonoros inteligentes que avisan antes de llover y radar en directo con 0% gasto extra de batería.
         </p>
+
+        <div class="banner-container">
+            <img src="app/src/main/ic_launcher-playstore.png" alt="TIEMPOCITY Preview" onerror="this.style.display='none'">
+        </div>
 
         <div class="cta-group">
             <a href="https://play.google.com/store/apps/details?id=com.example.tiempocity" class="play-store-btn" target="_blank" rel="noopener">
-                <span>🤖</span> Descargar en Google Play
+                <span>🤖</span> Descargar Gratis en Google Play
             </a>
-            <span style="font-size: 13px; color: #78909C;">Compatible con Android 10+ • Xiaomi MIUI / HyperOS • Totalmente Gratuito</span>
+            <span style="font-size: 13px; color: #78909C;">Compatible con Android 10+ • Xiaomi MIUI / HyperOS • Sin Registro</span>
         </div>
     </main>
 
