@@ -1,0 +1,14 @@
+# Strict GitIgnore for Public Web Repository (tiempocity)
+# Ignores everything by default to prevent accidental source code commits
+*
+
+# Allow gitignore and README
+!.gitignore
+!README.md
+
+# Allow ONLY web landing pages and Google Search Console verification files
+!index.html
+!privacy.html
+!google*.html
+!docs/
+!docs/*
